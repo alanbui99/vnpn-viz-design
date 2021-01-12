@@ -382,7 +382,14 @@
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Requests by Status</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Requests by</h6>
+                                    <div>
+                                        <select style="border: 1px solid #d1d3e2; border-radius: 0.35rem" id="pieChartContent">
+                                            <option value="status" selected>Status</option>
+                                            <option value="current-step">Current step</option>
+                                            <option value="broken-step">Broken step</option>
+                                        </select>
+                                    </div>
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body px-0">
