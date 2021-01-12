@@ -27,18 +27,26 @@ function number_format(number, decimals, dec_point, thousands_sep) {
   return s.join(dec);
 }
 
-// Bar Chart Example
-var ctx = document.getElementById("myMentorsInfo");
-var myBarChart = new Chart(ctx, {
-  type: 'horizontalBar',
+// Area Chart Example
+var ctx = document.getElementById("numMatchesChart");
+var myLineChart = new Chart(ctx, {
+  type: 'line',
   data: {
-    labels: ["Accounting", "Business Management", "Computer Science", "Data Analysis", "Economics", "Education","Engineering","Health Sciences", "Other"],
+    labels: ["2015", "2016", "2017", "2018", "2019", "2020", "2021"],
     datasets: [{
-      label: 'member',
-      backgroundColor:["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850",'#1cc88a', '#e74a3b', '#36b9cc', '#858796'],
-      hoverBackgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850",'#1cc88a', '#e74a3b', '#36b9cc', '#858796'],
-      // borderColor: "#4e73df",
-      data: [10,8,25,25,25,2,20,4,30,50 ],
+      label: "Earnings",
+      lineTension: 0.3,
+      backgroundColor: "rgba(78, 115, 223, 0.05)",
+      borderColor: "rgba(78, 115, 223, 1)",
+      pointRadius: 3,
+      pointBackgroundColor: "rgba(78, 115, 223, 1)",
+      pointBorderColor: "rgba(78, 115, 223, 1)",
+      pointHoverRadius: 3,
+      pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
+      pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+      pointHitRadius: 10,
+      pointBorderWidth: 2,
+      data: [20, 15, 25, 20, 30, 25, 40],
     }],
   },
   options: {
@@ -54,26 +62,23 @@ var myBarChart = new Chart(ctx, {
     scales: {
       xAxes: [{
         time: {
-          unit: ''
+          unit: 'date'
         },
         gridLines: {
           display: false,
           drawBorder: false
         },
         ticks: {
-          maxTicksLimit: 6
-        },
-        maxBarThickness: 25,
+          maxTicksLimit: 7
+        }
       }],
       yAxes: [{
         ticks: {
-          min: 0,
-          max: 100,
           maxTicksLimit: 5,
           padding: 10,
-          callback: 
-          function(value, index, values) {
-            return value;
+          // Include a dollar sign in the ticks
+          callback: function(value, index, values) {
+            return number_format(value);
           }
         },
         gridLines: {
@@ -89,25 +94,25 @@ var myBarChart = new Chart(ctx, {
       display: false
     },
     tooltips: {
+      backgroundColor: "rgb(255,255,255)",
+      bodyFontColor: "#858796",
       titleMarginBottom: 10,
       titleFontColor: '#6e707e',
       titleFontSize: 14,
-      backgroundColor: "rgb(255,255,255)",
-      bodyFontColor: "#858796",
       borderColor: '#dddfeb',
       borderWidth: 1,
       xPadding: 15,
       yPadding: 15,
       displayColors: false,
+      intersect: false,
+      mode: 'index',
       caretPadding: 10,
       callbacks: {
         label: function(tooltipItem, chart) {
           var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-
-          return number_format(tooltipItem.xLabel) + datasetLabel;
-
+          return datasetLabel + ': $' + number_format(tooltipItem.yLabel);
         }
       }
-    },
+    }
   }
 });
