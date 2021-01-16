@@ -102,7 +102,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="mentors.pcame.html">
+                <a class="nav-link" href=/mentors.pcame.html">
                     <i class="fas fa-user-tie"></i>
                     <span>Mentors</span>
                 </a>
@@ -341,199 +341,24 @@
                 <main class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Dashboard</h1>
-
-                    <!-- Content Row -->
-                    <div class="row">
-                        <!-- H-came -->
-                        <section class="col-md-6">
-                            <article class="card">
-                                <div class="card-header bg-white lead text-center">
-                                    <span class="text-uppercase font-weight-bold">H-came</span>
-                                    (past 30 days)
-                                </div>
-                                <div class="card-body">
-                                    <div class="chart-area" style="max-width:600px; max-height: 300px">
-                                        <canvas id="hcameChart"></canvas>
-                                        <div class="text-center" style="margin-top: -20%">
-                                            <p class="text-uppercase font-weight-bold">Total requests</p>
-                                            <h3 class="text-dark font-weight-bold">6</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-footer bg-white">
-                                    <div class="row">
-                                        <div class="col d-flex flex-column align-items-center border-right">
-                                            <div class="text-success font-weight-bold">+2</div>
-                                            <div>this week</div>
-                                        </div>
-                                        <div class="col d-flex flex-column align-items-center">
-                                            <div class="text-dark font-weight-bold">2</div>
-                                            <div>ignored</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </article>
-                        </section>
-
-                        <!-- P-came -->
-                        <section class="col-md-6">
-                            <article class="card">
-                                <div class="card-header bg-white lead text-center">
-                                    <span class="text-uppercase font-weight-bold">P-came</span>
-                                    (season 5)
-                                </div>
-                                <div class="card-body">
-                                    <div class="chart-area" style="max-width:600px; max-height: 300px">
-                                        <canvas id="pcameChart"></canvas>
-                                        <div class="text-center" style="margin-top: -20%">
-                                            <p class="text-uppercase font-weight-bold">Total matches</p>
-                                            <h3 class="text-dark font-weight-bold">32</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-footer bg-white">
-                                    <div class="d-flex flex-column align-items-center">
-                                        <div class="text-success font-weight-bold">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trending-up"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>                                                
-                                            20%                                  
-                                        </div>
-                                        <div>more than last season</div>
-                                    </div>
-                                </div>
-                                
-                            </article>
-                        </section>
+                    <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="chart-area" style="max-width:600px; max-height: 300px">
+                                <canvas id="chartJSContainer"></canvas>
+                            </div>
+                        </div>    
                     </div>
-
-
-                    <!-- Content Row -->
-                    <!-- <div class="row"> -->
-                        <!-- Number of total H-Came Request Card -->
-                        <!-- <div class="col-xl-4 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Total H-Came requests (This Month)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">40 requests</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-users fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                        <!-- Number of pending H-Came Request Card -->
-                        <!-- <div class="col-xl-4 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Pending H-Came requests (This Month)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">10 requests</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-users fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                        <!-- Number of active H-Came Request Card -->
-                        <!-- <div class="col-xl-4 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Active H-Came requests (This Month)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">30 requests</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-users fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- Content Row -->
-
-                    <!-- <div class="row"> -->
-
-                        <!-- Area Chart -->
-                        <!-- <div class="col-md-6">
-                            <div class="card shadow mb-4"> -->
-                                <!-- Card Header - Dropdown -->
-                                <!-- <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">H-came Requests Overview</h6>
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">H-came</div>
-                                            <a class="dropdown-item" href="#">Numbers of mentors</a>
-                                            <a class="dropdown-item" href="#">Numbers of requests</a>
-                                        </div>
-                                    </div>
-                                </div> -->
-                                <!-- Card Body -->
-                                <!-- <div class="card-body">
-                                    <div class="chart-area">
-                                        <canvas id="numRequestsChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-
-                        <!-- Pie Chart -->
-                        <!-- <div class="col-xl-4 col-lg-5">
-                            <div class="card shadow mb-4"> -->
-                                <!-- Card Header - Dropdown -->
-                                <!-- <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">H-came Requests</h6>
-                                   
-                                </div> -->
-                                <!-- Card Body -->
-                                <!-- <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        <canvas id="requestsByStatusChart"></canvas>
-                                    </div>
-                                    
-                                    <div class="mt-4 text-center small">
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-primary"></i>Done
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-warning"></i>Pending
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-success"></i>Active
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-danger"></i>Failed
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-info"></i>Manual
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-secondary"></i>Broken
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
+                    <!-- <section style="width: 600px; height: 400px">
+                        <canvas id="chartJSContainer" width="300" height="200"></canvas> -->
+                        <!-- <canvas id="secondContainer" width="300" height="200"></canvas> -->
+                        <!-- <p style="position: absolute;
+                        top: 8rem;
+                        left: 50%;
+                        -webkit-transform: translateX(-50%);
+                        transform: translateX(-50%);">100%</p>     -->
+                        <!-- <p class="text-center" style="margin-top: -50%">1</p>
+                    </section> -->
 
                 </main>
                 <!-- /.container-fluid -->
@@ -596,10 +421,7 @@
     <script src="vendor/chart.js/Chart.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="charts/dashboard/hcame-chart.js"></script>
-    <script src="charts/dashboard/pcame-chart.js"></script>
-    <!-- <script src="charts/hcame/num-requests-chart.js"></script>
-    <script src="charts/hcame/requests-by-status-chart.js"></script> -->
+    <script src="js/demo/chart-half-donut-demo.js"></script>
 
 </body>
 
